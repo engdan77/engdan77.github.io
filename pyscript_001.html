@@ -40,6 +40,8 @@ Enter your name: <input id="input"/>
 <script type="py">
   from pyscript import display, document, when
 
+  print('Starting')
+
   @when('click', '#my_button')
   def output_text():
         t = document.getElementById('input').value
