@@ -33,8 +33,9 @@
 </head>
 <body>
 Hello, this is a small test</br></br>
-<button id='my_button'>Press me</button>
-Enter your name: <input id="input"/>
+
+Enter your name: <input id="input"/><br/>
+<button id='my_button'>Press me</button><br/>
 <div id="output"></div>
 
 <script type="py">
@@ -45,7 +46,9 @@ Enter your name: <input id="input"/>
   @when('click', '#my_button')
   def output_text():
         t = document.getElementById('input').value
+        print(f'The value is {t}')
         display(t, f'Hellp {t}')
+  
 </script>
 
 </body>
