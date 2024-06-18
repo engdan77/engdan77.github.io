@@ -34,6 +34,7 @@
 <body>
 Hello, this is a small test
 <button id='my_button'>Press me</button>
+<input id="input">Enter your name: </input>
 <div id="output"></div>
 
 <script type="py">
@@ -41,8 +42,8 @@ Hello, this is a small test
 
   @when('click', '#my_button')
   def output_text():
-        t = document.getElementById('output').innerHTML
-        display('output', t)
+        t = document.getElementById('input').value
+        display(t, 'output')
 </script>
 
 </body>
