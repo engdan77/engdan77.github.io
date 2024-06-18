@@ -32,14 +32,17 @@
 
 </head>
 <body>
-Hello
+Hello, this is a small test
+<button id='my_button'></button>
+<div id="output"></div>
 
 <script type="py">
-    from pyscript import display
-    print('Goodbye')
-    # name = input('What is your name: ')
-    # print(f'Hello {name}') 
-  
+  from pyscript import display, document, when
+
+  @when('click', '#my_button')
+  def output_text():
+        t = document.getElementById('output').innerHtml
+        display('output', t)
 </script>
 
 </body>
